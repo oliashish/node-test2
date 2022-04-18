@@ -23,7 +23,7 @@ jobs:
             cache: 'npm'
         - run: npm install
         - name: Creating a Dockerfile
-        - run: |
+          run: |
             echo "
             FROM node
             WORKDIR /app
@@ -34,10 +34,10 @@ jobs:
             CMD ["node", "server"]
             " > Dockerfile
         - name: Installing patr-cli
-        - run: snap install patr -y
+          run: snap install patr -y
 
         - name: Build image from Dockerfile and push to patr-registry
-        - run: |
+          run: |
             docker login -u rakshith-ravi -p ${REGISTRY_PASSWORD} registry.patr.cloud
             docker build . -t rakshith-ravi/deployment
             docker tag rakshith-ravi/deployment registry.patr.cloud/personal-workspace-a45b1cb6f48b4437ae8543a33fbf7786/test:latest 
