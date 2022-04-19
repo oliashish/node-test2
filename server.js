@@ -9,7 +9,7 @@ app.get("/", (req,res) => {
 	res.json({message: "Hello world this is testing the deployment....."});
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 7777;
 app.listen(PORT, ()=> {
 	console.log("server started at: ", PORT);
 }); 
