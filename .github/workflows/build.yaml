@@ -36,5 +36,5 @@ jobs:
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
             docker build . -t ashish-oli/deployment
-            docker tag ashish-oli/deployment registry.patr.cloud/personal-workspace-1424404d9fff474bba7f23825681f6a8/testing:latest 
-            docker push registry.patr.cloud/personal-workspace-1424404d9fff474bba7f23825681f6a8/testing:latest 
+            docker tag ashish-oli/deployment registry.patr.cloud/personal-workspace-1424404d9fff474bba7f23825681f6a8/node:latest 
+            docker push registry.patr.cloud/personal-workspace-1424404d9fff474bba7f23825681f6a8/node:latest 
